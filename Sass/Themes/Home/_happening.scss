@@ -1,0 +1,195 @@
+@media only screen and(max-width:1600px){
+.happening{
+    width:100%;
+    margin: 0 auto;
+    padding: 0;
+    .row{
+        margin-left:0;
+        margin-right:0;
+        height:30%;
+        .happening__item{
+            width:100%;
+            height:100%;
+        }
+        .happening__item1{
+            text-align: center;
+            margin:7% 0;
+            p{
+                &:first-child{
+                    font-size:30px;
+                }
+                &:last-child{
+                    font-size:18px;
+                }
+            }
+        }
+    }
+    .col-md-8, .col-md-3{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .happening__item{
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        .happening__img{
+            width:100%;
+            height:100%;
+            img{
+                width:100%;
+                height:100%;
+                transition: all 0.3s ease;
+                &:hover{
+                    transform: scale(1.1,1.1);
+                }
+            }
+        }
+        .happening__content{
+                position: absolute;
+                bottom:0;
+                left:0;
+                width:100%;
+                height:15%;
+                background-color:rgba($color: $color-blue-0, $alpha: 0.6);
+                color:white;
+                padding: 10px 14px;
+                p{
+                    margin:0;
+                }
+                .flex-item{
+                    font-size:1vw;
+                }
+                .rounded-angle{
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    &:hover{
+                        background-color: $color-white-0;
+                        color: rgba(0,0,0,0.5);
+                    }
+                }
+        }
+        .happening__content2{
+            height:14%;
+            padding: 20px 14px;
+            font-size:25px;
+            .rounded-angle{
+                margin-left:50%;
+                font-size:24px;
+                width:35px;
+                height:35px;
+                line-height: 35px;
+            }
+        }
+    }
+    .grid__item{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        .happening__item2{
+            grid-column: 1/3;
+        }
+        .grid__item-right{
+            grid-column: 3/5;
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+            height:100%;
+        }
+        divHide{
+            display:block!important;
+        }
+    }
+    .view__mobile{
+        display: none;
+    }
+}
+}
+@media (max-width: 1199px) and (min-width: 768px){
+    .happening{
+        .happening__item{
+            .happening__content{
+                padding:4px 0;
+                .rounded-angle{
+                    width:20px;
+                    height:20px;
+                    line-height: 20px;
+                }
+                .flex-item{
+                    font-size:1vw;
+                    p{
+                        width:50%;
+                    }
+                }
+            } 
+            .happening__content2{
+                padding:15px 0;
+                .rounded-angle{
+                    width:25px;
+                    height:25px;
+                    line-height: 25px;
+                }
+                .flex-item{
+                    font-size: 2vw;
+                }
+            }
+        } 
+    } 
+}
+
+@media (max-width: 767px) and (min-width: 320px){
+    .happening__mobile{
+        .row{
+            display:block;
+            .happening__item1{
+                height:fit-content;
+            }
+            .happening__item2{
+                height:20%;
+            }
+        }
+        .grid__item{
+            margin:0;
+            display:block;
+            .grid__item-right{
+                display: block;
+            }
+        }
+        .happening__item{
+            .happening__content,.happening__content2{
+                font-size:30px;
+                padding: 2% 14px;
+                .rounded-angle{
+                    margin-left:20%;
+                    width:40px;
+                    height:40px;
+                    line-height: 40px;
+                }
+                .flex-item{
+                    font-size:4vw;
+                }
+            }
+        }
+        .hide{
+            display: none;
+        }
+        .view__mobile{
+            display: block;
+            button{
+                width:100%;
+                color: white;
+                background-color: $color-blue-0;
+                font-size:30px;
+                border:none;
+                padding: 2% 0;
+                .fa-plus, .fa-minus{
+                    font-size:18px;
+                    margin-left:3%;
+                    width:30px;
+                    height:30px;
+                    border:1px solid white;
+                    border-radius: 50%;
+                    line-height: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

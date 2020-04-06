@@ -1,0 +1,72 @@
+@media only screen and(max-width:1600px) {
+.carousel{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top:86px;
+    .carousel__img{
+        max-width:100%;
+        background-image: url("../img/carousel.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:640px;
+    }
+    .carousel__content{
+        position: absolute;
+        top:0;
+        left: 0;
+        color: $color-white-0;
+        margin:30px 90px;
+        width:80%;
+        padding:20px;
+        cursor: pointer;
+        &:hover .rounded-angle{
+            color: rgba(0,0,0,0.3);
+            background-color: $color-white-0;
+        }
+        & p:first-child{
+            font-size: 42px;
+        }
+        & p:nth-child(2){
+            font-size: 20px;
+        }
+        .rounded-angle{
+            width:25px;
+            height:25px;
+            border-radius: 50%;
+            border: 1px solid $color-white-0;
+            text-align: center;
+            line-height: 25px;
+            margin-left:20px;
+        }
+        .disclosures{
+            margin-top:420px;
+        }
+    }
+}
+}
+@media (max-width: 1199px) and (min-width: 768px){
+    .carousel{
+        .carousel__content{
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 767px) and (min-width: 320px){
+    .carousel{
+        margin-top:52px;
+    .carousel__img{
+        height:380px;
+        background-position: center;
+    }
+    .carousel__content{
+        text-align: center;
+        margin:30px 10%;
+        & p:first-child{
+            font-size: 30px;
+        }
+    }
+    }
+}

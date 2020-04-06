@@ -1,0 +1,248 @@
+@media only screen and(max-width:1600px) { 
+  header{
+      width:100%;
+      .row{
+          padding:10px 30px;
+          position: fixed;
+          width:97%;
+          z-index: 1;
+          background-color: white;
+          border-bottom:1px solid rgba(0,0,0,0.05);
+      }
+      .logo{
+          width:10%;
+          img{
+              width:60%;
+              padding:20px 0;
+          }
+      }
+      .navbar-brand{
+          margin-right:0;
+      }
+      .navbar{
+          i{
+              color:$color-blue-0;
+          }
+          .nav-item{
+              padding:20px;
+              margin:0;
+              font-size:18px;
+              color:$color-blue-0;
+              cursor: pointer;
+              &:active{
+                  border: 1px solid $color-blue-0;
+              }
+          }
+      }
+      .logo{
+        img{
+            width:110px;
+        }
+    }
+}
+}
+@media (max-width: 1199px) and (min-width: 768px){
+    .header{
+        .row{
+            width:102%;
+            .navbar{
+                padding-left:42px;
+            }
+        }
+        .navright{
+            p{
+                padding:0;
+            }
+            i{
+                padding: 0 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .header{
+        position: relative;
+        .header__button {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            .header__button-detail{
+                background-color: white;
+                z-index: 1;
+                width:100%;
+                height:100%;
+                position: fixed;
+                transform: translateX(-1600px);
+                transition: all 1s;
+                top:70px;
+                left:0;
+                .form-group{
+                    display: flex;
+                    align-items: center;
+                    width:100%;
+                    .form-control{
+                    border-radius: 0;
+                        &:focus{
+                        box-shadow: none;
+                        }
+                    }
+                    input{
+                        padding:30px;
+                        width:90%;
+                        background-color: $color-blue-0;
+                        border-right:none;
+                    }
+                    ::placeholder{
+                        color: white;
+                        font-size:28px;
+                    }
+                    label{
+                        margin-bottom:0;
+                    }
+                    .fa-search{
+                        background-color: $color-blue-0;
+                        padding:16.4px;
+                        color:white;
+                        font-size:28px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .header__detailpart{
+                padding:0 4%;
+                .header__detail{
+                    color:$color-blue-0;
+                    font-size:24px;
+                    .fa-angle-right{
+                        margin-left:5%;
+                    }
+                    .header__item{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 2% 0;
+                        border-bottom: 1px solid rgba(0,0,0,0.05);
+                        cursor: pointer;
+                    }
+                }
+                .language__button{
+                    padding:4%;
+                    .english{
+                        width:100%;
+                        margin-bottom:2%;
+                        background-color: $color-blue-1;
+                        color:white;
+                        border:none;
+                        padding:1% 0;
+                    }
+                    .spanish{
+                        width:100%;
+                        margin-bottom:2%;
+                        background-color: white;
+                        border:1px solid $color-blue-1;
+                        color:$color-blue-1;
+                        padding:1% 0;
+                    }
+                }
+                .header__contact{
+                    p{
+                        margin-bottom:0;
+                    }
+                    a{
+                        color:$color-blue-0;
+                    }
+                    .header__contact-item{
+                        padding:4% 0;
+                    }
+                    .header__contact-item1{
+                        border-bottom: 1px solid rgba(0,0,0,0.05);
+                    }
+                }
+            }
+            }
+
+            .mobile__logo{
+                img{
+                    width:110px;
+                }
+            }
+                .change{
+                .header__button-detail{
+                    transform: translateX(0);
+                    transition: all 0.5s;
+                }
+                .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+                transform: rotate(-45deg) translate(-9px, 6px) ;
+                }
+                  .bar2 {
+                opacity: 0;
+                }
+                .bar3 {
+                    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+                    transform: rotate(45deg) translate(-8px, -8px) ;
+                }
+            }
+          
+          .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: $color-blue-0;
+            margin: 6px 0;
+            transition: 0.4s;
+          }
+        .mobile__header{
+            background-color:white;
+            padding:2%;
+            z-index: 1;
+            position: fixed;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100%;
+            // display:none;
+            .fa-user{
+                color: $color-blue-0;
+                font-size:22px;
+                width: 35px;
+                height:35px;
+                border:1px solid $color-blue-0;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 35px;
+            }
+        }
+        .header__contact-detail{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .signin__logo{
+            position: relative;
+            &:hover{
+                .signin__detail{
+                    display: block;
+                }
+            }
+            .signin__detail{
+                position: absolute;
+                background-color: white;
+                right: 12px;
+                width:200px;
+                padding:10px;
+                display:none;
+                p{
+                    margin:0;
+                }
+                .signin__detail-item1{
+                    border-bottom: 1px solid rgba(0,0,0,0.05);
+                }
+                .signin__detail-item{
+                    padding:20px;
+                    color: $color-blue-0;
+                }
+            }
+        }
+    }
+}

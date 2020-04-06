@@ -1,0 +1,80 @@
+@media only screen and(max-width:1600px){
+.product{
+    .product__cover{
+        background-image: url("../img/product.jpeg");
+        max-width:100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height:550px;
+        .product__content{
+            text-align: center;
+            width:85%;
+            margin:3% auto;
+            height:100%;
+            cursor: pointer;
+            &:hover .btnall{
+                border:1px solid $color-blue-0;
+                color:$color-blue-0;
+                background-color: white;
+            }
+            p:first-child{
+                font-size: 40px;
+            }
+            p:nth-child(2){
+                font-size:24px;
+            }
+            .btnall{
+                padding:1% 7%;
+                color:white;
+                background-color: $color-blue-0;
+                border:none;
+                display: inline;
+                &:hover{
+                    border-color:black;
+                }
+            }
+            .flex-item{
+                display: none;
+            }
+        }
+    }
+}
+}
+@media (max-width: 767px) and (min-width: 320px){
+    .product{
+        .product__cover{
+            height:400px;
+            .product__content{
+                p:first-child{
+                    font-size: 30px;
+                }
+                .btnall{
+                    display: none;
+                }
+                .flex-item{
+                    display:flex;
+                }
+                .mobile__btnall{
+                    justify-content: center;
+                    color:$color-blue-0;
+                    background-color: none;
+                    margin-top:10px;
+                    .rounded-angle{
+                        border-color: $color-blue-0;
+                        margin-left:20px;
+                    }
+                    &:hover{
+                        .rounded-angle{
+                            color: white;
+                            background-color:$color-blue-1;
+                        }
+                        p{
+                            color:$color-blue-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
